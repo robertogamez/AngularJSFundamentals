@@ -1,1 +1,15 @@
 ﻿@*https://www.codeproject.com/Articles/1237106/Single-Page-Application-Using-ASP-Net-Core-Angular*@
+<h1 ng-controller="HelloWorldCtrl">
+    {{helloMessage}}
+</h1>
+
+@section scripts {
+    <script>
+        angular.module('app', [])
+            .controller('HelloWorldCtrl', function ($scope) {
+
+                $scope.helloMessage = 'Hello World';
+
+            });
+    </script>
+}
