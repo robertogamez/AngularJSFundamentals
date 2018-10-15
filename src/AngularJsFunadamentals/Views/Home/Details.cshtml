@@ -1,6 +1,8 @@
 ﻿<div class="container">
     <div ng-controller="EventController">
 
+        @Html.ActionLink("New Event", "Edit", "Home", null, new { @class = "btn btn-link" })
+
         <img ng-src="{{event.imageUrl}}" title="event.name" />
 
         <div class="row">
