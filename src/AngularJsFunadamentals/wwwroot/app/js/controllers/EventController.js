@@ -1,43 +1,16 @@
 ﻿/// <reference path="../../lib/angular/angular.js" />
+/// <reference path="../services/eventdata.js" />
+
 'use strict';
 
 angular.module('eventsApp')
-    .controller('EventController', function ($scope) {
+    .controller('EventController', function ($scope, $log, eventData) {
 
-        $scope.event = {
-            name: 'Angular Boot Camp',
-            date: '13/10/2018',
-            time: '05:00 pm',
-            location: {
-                address: 'Google Template',
-                city: 'Mountain View',
-                state: 'CA'
-            },
-            imageUrl: '/app/img/angularjs-logo.png',
-            sessions: [
-                {
-                    name: 'Directives Masterclass',
-                    creatorName: 'Bon Smith',
-                    duration: '1 hr',
-                    level: 'Advanced',
-                    upVoteCount: 0
-                },
-                {
-                    name: 'Scopes for fun and profit',
-                    creatorName: 'John Doe',
-                    duration: '30 min',
-                    level: 'Advanced',
-                    upVoteCount: 0
-                },
-                {
-                    name: 'Well Behaved Controllers',
-                    creatorName: 'Jane Doe',
-                    duration: '2 hrs',
-                    level: 'Advanced',
-                    upVoteCount: 0
-                }
-            ]
-        };
+        eventData.getEvent().then(function (response) {
+            $scope.event = response.data;
+        }, function (error) {
+            $log.warn(error);
+        });
 
         $scope.upVoteSession = function (session) {
             session.upVoteCount++;

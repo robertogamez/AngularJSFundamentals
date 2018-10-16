@@ -22,5 +22,10 @@ namespace AngularJsFunadamentals.Controllers
         {
             return View();
         }
+
+        public IActionResult EditProfile()
+        {
+            return View();
+        }
     }
 }

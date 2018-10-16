@@ -29,7 +29,7 @@
                 <address>
                     <strong>Address:</strong> <br />
                     {{event.location.address}}<br />
-                    {{event.location.city}} - 
+                    {{event.location.city}} -
                     {{event.location.state}}
                 </address>
             </div>
@@ -41,7 +41,7 @@
             Sessions
         </h3>
         <ul class="list-group">
-            <li class="list-group-item" 
+            <li class="list-group-item"
                 ng-repeat="session in event.sessions">
                 <div class="row">
                     <div class="col-md-1">
@@ -70,4 +70,5 @@
 
 @section scripts {
     <script src="~/app/js/controllers/EventController.js"></script>
+    <script src="~/app/js/services/EventData.js"></script>
 }
