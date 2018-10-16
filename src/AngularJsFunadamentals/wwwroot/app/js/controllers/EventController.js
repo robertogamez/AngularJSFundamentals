@@ -4,6 +4,15 @@
 angular.module('eventsApp')
     .controller('EventController', function ($scope) {
 
+        $scope.sortorder = 'name';
+        $scope.snippet = '<span style="color: red">h1 there</span>';
+        $scope.boolValue = false;
+        $scope.mystyle = {
+            color: 'red'
+        };
+        $scope.myclass = "blue";
+        $scope.buttonDisabled = true;
+
         $scope.event = {
             name: 'Angular Boot Camp',
             date: '13/10/2018',
@@ -16,23 +25,23 @@ angular.module('eventsApp')
             imageUrl: '/app/img/angularjs-logo.png',
             sessions: [
                 {
-                    name: 'Directives Masterclass',
+                    name: 'Directives Masterclass - Advanced',
                     creatorName: 'Bon Smith',
-                    duration: '1 hr',
-                    level: 'Advanced',
-                    upVoteCount: 0
+                    duration: 1,
+                    level: 'advanced',
+                    upVoteCount: 1
                 },
                 {
-                    name: 'Scopes for fun and profit',
+                    name: 'Scopes for fun and profit - Intermediate',
                     creatorName: 'John Doe',
-                    duration: '30 min',
-                    level: 'Advanced',
-                    upVoteCount: 0
+                    duration: 2,
+                    level: 'intermediate',
+                    upVoteCount: 2
                 },
                 {
-                    name: 'Well Behaved Controllers',
+                    name: 'Well Behaved Controllers - Advanced',
                     creatorName: 'Jane Doe',
-                    duration: '2 hrs',
+                    duration:  3,
                     level: 'Advanced',
                     upVoteCount: 0
                 }
