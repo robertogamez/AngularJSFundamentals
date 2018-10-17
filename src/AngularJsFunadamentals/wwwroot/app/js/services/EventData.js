@@ -3,7 +3,10 @@
 "use strict";
 
 angular.module('eventsApp')
-    .factory('eventData', function ($http, $log) {
+    .factory('eventData', function ($http, $log, $resource) {
+
+        var resource = $resource('/api/event');
+
         return {
             event: {
                 name: 'Angular Boot Camp',
@@ -44,6 +47,13 @@ angular.module('eventsApp')
                     method: 'get',
                     url: '/api/event'
                 });
+            },
+            getEventResource: function () {
+                return resource.get();
+                // $resource("/api/event/:id", { id: '@id' }).get({ id: 1 });
+            },
+            save: function (event) {
+                return resource.save(event);
             }
         };
     });

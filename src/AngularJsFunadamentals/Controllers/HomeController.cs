@@ -27,5 +27,10 @@ namespace AngularJsFunadamentals.Controllers
         {
             return View();
         }
+
+        public IActionResult CacheSample()
+        {
+            return View();
+        }
     }
 }
