@@ -4,6 +4,6 @@
   "dependencies": {
     "angular": "*",
     "bootstrap": "3.3.7",
-    "angular-sanitize": "*"
+    "angular-resource": "*"
   }
 }
