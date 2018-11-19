@@ -1,5 +1,3 @@
-﻿/// <reference path="../../../lib/angular/angular.min.js" />
-/// <reference path="../../../lib/angular/angular.js" />
 "use strict";
 
 angular.module('eventsApp')

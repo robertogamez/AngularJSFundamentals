@@ -1,6 +1,3 @@
-﻿/// <reference path="../../lib/angular/angular.js" />
-/// <reference path="../services/eventdata.js" />
-
 'use strict';
 
 angular.module('eventsApp')

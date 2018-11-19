@@ -1,9 +1,10 @@
 {
-	"name": "asp.net",
+  "name": "asp.net",
   "private": true,
   "dependencies": {
-    "angular": "*",
+    "angular": "1.6.5",
     "bootstrap": "3.3.7",
-    "angular-resource": "*"
+    "angular-resource": "1.6.5",
+    "angular-datatables": "v0.6.2"
   }
 }

@@ -1,0 +1,19 @@
+﻿<div class="container">
+    <div ng-controller="ListEventController">
+        <div class="container">
+            <h1>List events</h1>
+            <hr />
+
+            <table id="events-grid"
+                   datatable=""
+                   dt-options="dtOptions"
+                   dt-columns="dtColumns"
+                   class="table table-hover"></table>
+
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script src="~/app/js/controllers/ListEventsController.js"></script>
+}
